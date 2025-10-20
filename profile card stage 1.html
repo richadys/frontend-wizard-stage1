@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | Stage 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header>
+    <nav>
+      <a href="profile.html" class="active" data-testid="test-nav-home">Home</a>
+      <a href="about.html" data-testid="test-nav-about">About</a>
+      <a href="contact.html" data-testid="test-nav-contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article class="profile-card" data-testid="test-profile-card">
+      <figure>
+        <img
+          src="./WhatsApp Image 2025-10-18 at 11.53.33_1f93adc0.jpg"
+          alt="Profile avatar of Jason Nanayaw Owusu"
+          data-testid="test-user-avatar"
+        />
+      </figure>
+
+      <header>
+        <h1 data-testid="test-user-name">Jason Nanayaw Owusu</h1>
+      </header>
+
+      <p data-testid="test-user-bio">
+        Frontend developer passionate about building accessible, human-friendly web experiences.
+      </p>
+
+      <p>
+        Current Time (ms):
+        <span data-testid="test-user-time" id="current-time"></span>
+      </p>
+
+      <!-- Social Links -->
+      <nav data-testid="test-user-social-links" aria-label="Social Links">
+        <ul>
+          <li>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-twitter"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-github"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-linkedin"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Hobbies -->
+      <section data-testid="test-user-hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Coding creative UIs</li>
+          <li>Gaming</li>
+          <li>Exploring new tech tools</li>
+        </ul>
+      </section>
+
+      <!-- Dislikes -->
+      <section data-testid="test-user-dislikes">
+        <h2>Dislikes</h2>
+        <ul>
+          <li>Cluttered code</li>
+          <li>Negativity</li>
+          <li>Laziness</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Jason Nanayaw Owusu. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for time -->
+  <script>
+    const timeEl = document.getElementById("current-time");
+    const updateTime = () => {
+      timeEl.textContent = Date.now();
+    };
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>

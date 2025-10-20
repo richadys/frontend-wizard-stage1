@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Jason Nanayaw Owusu</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="profile.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <main data-testid="test-contact-page" class="container">
+      <h1>Contact Me</h1>
+      <p>If you have any questions or comments, please fill out the form below.</p>
+
+      <form id="contactForm" data-testid="test-contact-form" novalidate>
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            data-testid="test-contact-name"
+            required
+          />
+          <small id="test-contact-error-name" data-testid="test-contact-error-name" class="error"></small>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="name@example.com"
+            data-testid="test-contact-email"
+            required
+          />
+          <small id="test-contact-error-email" data-testid="test-contact-error-email" class="error"></small>
+        </div>
+
+        <!-- Subject -->
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Enter subject"
+            data-testid="test-contact-subject"
+            required
+          />
+          <small id="test-contact-error-subject" data-testid="test-contact-error-subject" class="error"></small>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message here..."
+            data-testid="test-contact-message"
+            required
+          ></textarea>
+          <small id="test-contact-error-message" data-testid="test-contact-error-message" class="error"></small>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" data-testid="test-contact-submit">Submit</button>
+
+        <!-- Success Message -->
+        <p
+          id="success"
+          data-testid="test-contact-success"
+          class="success"
+          hidden
+        ></p>
+      </form>
+    </main>
+
+    <footer>
+      <p>© 2025 Jason Nanayaw Owusu. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
